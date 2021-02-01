@@ -2,18 +2,22 @@
 
 using namespace std;
 
-int main(){
-    int N, ans = 0, cnt;
+int main()
+{
+
+    int N, cnt =0;
     cin >> N;
 
-    for( int i = 1 ; i <= N; i++)
+    for(int i = 1; i <= N ;i++)
     {
-        int cur = i;
-        while(cur)
+        int tmp = i;
+        while(tmp)
         {
-            cur /= 10;
-            ans++;
+            tmp /= 10;
+            cnt++;
         }
     }
-    cout << ans;
+    cout <<cnt;
 }
+
+

@@ -2,25 +2,26 @@
 
 using namespace std;
 
-int cnt[50001];
-
 
 
 int main()
 {
-    int n;
 
-    cin >> n;
+    int N, cnt = 0;
+    cin >> N;
 
-    for(int i = 1; i <= n ; i++)
+    int num[N + 1] ={0,};
+
+    for(int i = 1 ; i <= N ; i++)
     {
-        for(int j = i ; j <= n ; j=j+i)
-        {
-            cnt[j]++;
-        }
+        for(int j = i; j <= N ; j+= i)
+            num[j]++;
     }
 
-    for(int i = 1 ; i <= n ; i++)
-        cout << cnt[i];
+    for(int i = 1; i <= N; i++)
+        cout << num[i] << " ";
 
 }
+
+
+
